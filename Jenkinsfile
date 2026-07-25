@@ -16,7 +16,7 @@ pipeline {
                         echo "Repository exists. Pulling latest changes..."
                         
                         dir(env.TARGET_DIR) {
-                            sh 'git pull origin main'${env.BRANCH}"
+                            sh "git pull origin main ${env.BRANCH}"
                         }
                     } else {
                         echo "Repository not found. Cloning..."
